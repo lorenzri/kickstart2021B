@@ -28,12 +28,12 @@ class Solution {
 				o[j] = sum;
 			}
 
-			StringBuffer os = new StringBuffer();
+			StringBuilder sb = new StringBuilder();
 			for (int oi : o) {
-				os.append(oi).append(" ");
+				sb.append(oi).append(" ");
 			}
 
-			System.out.println("Case #" + i + ": " + os);
+			System.out.println("Case #" + i + ": " + sb);
 		}
 	}
 }
