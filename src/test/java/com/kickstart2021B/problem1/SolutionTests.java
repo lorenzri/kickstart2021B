@@ -1,4 +1,4 @@
-package com.kickstart2021B;
+package com.kickstart2021B.problem1;
 
 
 import org.junit.Test;

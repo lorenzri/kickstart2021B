@@ -1,6 +1,5 @@
-package com.kickstart2021B;
+package com.kickstart2021B.problem2;
 
-import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.time.Duration;
 import java.time.Instant;
