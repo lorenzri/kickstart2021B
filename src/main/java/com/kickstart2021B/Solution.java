@@ -2,38 +2,39 @@ package com.kickstart2021B;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.time.Duration;
+import java.time.Instant;
 import java.util.Scanner;
 
 class Solution {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		Scanner input = new Scanner(new BufferedReader(new InputStreamReader(System.in)));
+        Instant start = Instant.now();
 
-		int t = input.nextInt();
+        Scanner input = new Scanner(new InputStreamReader(System.in));
 
-		for (int i = 1; i <= t; ++i) {
-			int n = input.nextInt();
-			String s = input.next().trim();
-			int[] o = new int[n];
-			char last = 0;
-			int sum = 0;
-			for (int j = 0; j < n; j++) {
-				if(j == 0 || last < s.toCharArray()[j]){
-					sum++;
-					last = s.toCharArray()[j];
-				} else {
-					sum = 1;
-				}
-				o[j] = sum;
-			}
+        int t = input.nextInt();
 
-			StringBuilder sb = new StringBuilder();
-			for (int oi : o) {
-				sb.append(oi).append(" ");
-			}
+        for (int i = 1; i <= t; ++i) {
+            int n = input.nextInt();
+            String s = input.next();
+            char last = 0;
+            int sum = 0;
+            StringBuilder sb = new StringBuilder();
+            for (int j = 0; j < n; j++) {
+                if (last < s.toCharArray()[j]) {
+                    sum++;
+                } else {
+                    sum = 1;
+                }
+                last = s.toCharArray()[j];
+                sb.append(sum).append(" ");
+            }
 
-			System.out.println("Case #" + i + ": " + sb);
-		}
-	}
+            System.out.println("Case #" + i + ": " + sb);
+        }
+        Instant end = Instant.now();
+        System.out.println(Duration.between(start, end));
+    }
 }
