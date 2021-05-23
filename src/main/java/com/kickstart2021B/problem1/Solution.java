@@ -11,10 +11,6 @@ class Solution {
 
         Instant start = Instant.now();
 
-        Scanner input = new Scanner(new InputStreamReader(System.in));
-
-        int t = input.nextInt();
-
         for (int i = 1; i <= t; ++i) {
             int n = input.nextInt();
             String s = input.next();
@@ -31,7 +27,6 @@ class Solution {
                 last = comp;
                 sb.append(sum).append(" ");
             }
-
             System.out.println("Case #" + i + ": " + sb);
         }
         Instant end = Instant.now();
